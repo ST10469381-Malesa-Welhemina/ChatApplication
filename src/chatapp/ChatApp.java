@@ -14,8 +14,9 @@ public class ChatApp {
         String username, password, phone;
         
     //Welcome screen
+        System.out.println("======================================");
         System.out.println("            WELCOME TO CHATAPP");
-      
+        System.out.println("======================================");
         
         //Get user's real name
         System.out.print("Enter first name: ");
@@ -63,9 +64,9 @@ public class ChatApp {
         System.out.println(regMsg);
         
        //---- Login section ----
-        System.out.println("");
+        System.out.println("====================================");
         System.out.println("              LOGIN SECTION");
-       
+        System.out.println("====================================");
         
         boolean loggedIn = false;
         while (!loggedIn) {
@@ -84,9 +85,9 @@ public class ChatApp {
             }
         }
         
-       
+        System.out.println("==============================================");
         System.out.println("        You are now logged into ChatApp");
-        
+        System.out.println("==============================================");
         
        
     }
