@@ -63,7 +63,7 @@ public class ChatApp {
         System.out.println(regMsg);
         
        //---- Login section ----
-       
+        System.out.println("");
         System.out.println("              LOGIN SECTION");
        
         
