@@ -9,15 +9,15 @@ public class ChatApp {
         Scanner scan = new Scanner(System.in);
         LoginFeature auth = new LoginFeature();
         
-      
+      //Personal details
         String firstName, lastName;
         String username, password, phone;
         
-    
+    //Welcome screen
         System.out.println("            WELCOME TO CHATAPP");
       
         
-        
+        //Get user's real name
         System.out.print("Enter first name: ");
         firstName = scan.nextLine();
         
@@ -25,7 +25,7 @@ public class ChatApp {
         lastName = scan.nextLine();
         System.out.println();
         
-       
+       //---- User validation loop ----
         do {
             System.out.print("Enter username (must contain _ and be ≤5 chars): ");
             username = scan.nextLine();
@@ -36,7 +36,7 @@ public class ChatApp {
         } while (!auth.checkUserName(username));
         System.out.println("Username successfully captured.\n");
         
-        
+        //---- Password validation loop ----
         do {
             System.out.print("Enter password (8+ chars, 1 capital, 1 number, 1 special): ");
             password = scan.nextLine();
@@ -47,7 +47,7 @@ public class ChatApp {
         } while (!auth.checkPasswordComplexity(password));
         System.out.println("Password successfully captured.\n");
         
-     
+     //---- Phone validation loop ----
         do {
             System.out.print("Enter cell phone number (+27 followed by 9 digits): ");
             phone = scan.nextLine();
@@ -58,11 +58,11 @@ public class ChatApp {
         } while (!auth.checkCellPhoneNumber(phone));
         System.out.println("Cell phone number successfully added.\n");
         
-       
+       //Register user
         String regMsg = auth.registerUser(username, password, firstName, lastName, phone);
         System.out.println(regMsg);
         
-        
+       //---- Login section ----
        
         System.out.println("              LOGIN SECTION");
        
@@ -88,6 +88,6 @@ public class ChatApp {
         System.out.println("        You are now logged into ChatApp");
         
         
-        scan.close();
+       
     }
 }
