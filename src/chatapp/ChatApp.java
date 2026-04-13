@@ -65,7 +65,7 @@ public class ChatApp {
         
        //---- Login section ----
         System.out.println("====================================");
-        System.out.println("              LOGIN SECTION");
+        System.out.println("              LOGIN SECTION" );
         System.out.println("====================================");
         
         boolean loggedIn = false;

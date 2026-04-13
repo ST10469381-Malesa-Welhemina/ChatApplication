@@ -21,10 +21,11 @@ public class LoginFeature {
         return username.contains("_") && username.length() <= 5;
     }
     
+    
   //Check the strength of the password: 8+ chars, capital letter, number,special character
     public boolean checkPasswordComplexity(String password) {
         if (password == null) return false;
-        System.out.println("Password must be at least 8 characters,include a capital letter, number, and special character.");
+        
         
         boolean lengthOk = password.length() >= 8;
         boolean hasCapital = password.matches(".*[A-Z].*");
@@ -41,6 +42,7 @@ public class LoginFeature {
         return Pattern.matches("^\\+27[0-9]{9}$", phone);
     }
     
+    
     // Register user after all validations
     public String registerUser(String username, String password, String firstName, String lastName, String phone) {
         StringBuilder msg = new StringBuilder();
@@ -53,6 +55,7 @@ public class LoginFeature {
         } else {
             msg.append("Username successfully captured.\n");
         }
+        
         
        //Password check
         if (!checkPasswordComplexity(password)) {
