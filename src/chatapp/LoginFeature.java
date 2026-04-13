@@ -14,7 +14,8 @@ public class LoginFeature {
     private String storedLast;
     private String storedPhone;
     
- //Check username: must have _ and maximum of 5 chars 
+    
+ //Check username: must have _ and max of 5 chars 
     public boolean checkUserName(String username) {
         if (username == null) return false;
         return username.contains("_") && username.length() <= 5;
@@ -23,6 +24,7 @@ public class LoginFeature {
   //Check the strength of the password: 8+ chars, capital letter, number,special character
     public boolean checkPasswordComplexity(String password) {
         if (password == null) return false;
+        System.out.println("Password must be at least 8 characters,include a capital letter, number, and special character.");
         
         boolean lengthOk = password.length() >= 8;
         boolean hasCapital = password.matches(".*[A-Z].*");
