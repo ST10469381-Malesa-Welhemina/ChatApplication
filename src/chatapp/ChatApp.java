@@ -2,6 +2,7 @@ package chatapp;
 
 import java.util.Scanner;
 
+//ChatApp - Main application for registration and login
 
 public class ChatApp {
     
